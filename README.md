@@ -62,7 +62,7 @@ pip install pillow opencv-python imgkit pytubefix
 
 1. **Run the main application**:
    ```bash
-   python Video_Asciify.py
+   python video_asciify.py
    ```
 
 2. **Follow the GUI steps**:
