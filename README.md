@@ -50,10 +50,11 @@ pip install pillow opencv-python imgkit pytubefix
    - **Linux**: `sudo apt-get install wkhtmltopdf`
 
 4. **Configure wkhtmltoimage path**:
-   Update the path in `Conversion.py` line 67:
+   Update the path in `Conversion.py` line 69:
    ```python
    config = imgkit.config(wkhtmltoimage=r'path/to/wkhtmltoimage')
    ```
+   Don't need to change anything if the wkhtmltoimage is in the same folder as the program
 
 ## Usage
 
@@ -155,7 +156,7 @@ The application generates:
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is open source and available under the [GNU General Public License v3.0](LICENSE).
 
 ## Acknowledgments
 
