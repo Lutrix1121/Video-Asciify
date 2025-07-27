@@ -1,0 +1,20 @@
+# Core image processing
+Pillow>=9.0.0
+
+# Video processing
+opencv-python>=4.5.0
+
+# HTML to image conversion
+imgkit>=1.2.0
+
+# YouTube video downloading
+pytubefix>=6.0.0
+
+# GUI framework (usually included with Python, but listed for completeness)
+# tkinter - included with most Python installations
+
+# Optional: For better error handling and file operations
+# These are built-in modules but listed here for documentation:
+# os - built-in
+# shutil - built-in
+# glob - built-in
