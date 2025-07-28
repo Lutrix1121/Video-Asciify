@@ -1,5 +1,3 @@
-
-
 VIDEO_LINK=None
 CURRENT_FILE = None
 
