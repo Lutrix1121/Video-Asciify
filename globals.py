@@ -1,4 +1,4 @@
-VIDEO_LINK=None
+VIDEO_LINK = None
 CURRENT_FILE = None
 
 def set_video_link(link):
