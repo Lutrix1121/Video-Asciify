@@ -1,5 +1,6 @@
 import imgkit
 import os
+import globals
 from video_processor import video_to_images, create_video_from_images
 from image_processor import get_image, pixelate_image, grayscale_image, get_color_data
 from ascii_converter import ascii_conversion, get_default_ascii_chars
@@ -7,7 +8,7 @@ from html_generator import create_ascii_html
 from file_manager import create_directories, cleanup_directories
 
 
-def conversion(video_path, output_video='final_video.mp4',progress_callback=None):
+def conversion(video_path, output_video=globals.SAVE_PATH ,progress_callback=None):
     """
     Convert video to ASCII art video.
     

@@ -18,6 +18,19 @@ def choose_path():
         messagebox.showwarning("Warning", "No path selected.")
         return None
 
+def save_path():
+    path=filedialog.askdirectory(
+        title="Select Save Directory",
+        mustexist=True,
+    )
+    if path:
+        globals.SAVE_PATH = path + '/final_video.mp4'
+        messagebox.showinfo("Path Selected", f"Path set to: {path}")
+        return path
+    else:
+        messagebox.showwarning("Warning", "No path selected.")
+        return None
+    
 def on_download(link_entry):
     """Handle video download process"""
     globals.set_video_link(get_video_link(link_entry))

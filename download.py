@@ -29,7 +29,7 @@ def download_video():
 
 def save_file_name():
     try:
-        list_of_files = glob.glob(f'{save_path}/*.mp4')
+        list_of_files = glob.glob(f'{save_path}/*.mp4') if save_path else glob.glob(f'{os.getcwd()}/*.mp4')
         if not list_of_files:
             messagebox.showinfo("Error", "Couldn't find any video files in the directory.")
             return
@@ -41,7 +41,4 @@ def save_file_name():
 def get_latest_file():
     save_file_name()
     if globals.CURRENT_FILE:
-        messagebox.showinfo("Latest video file", f"Latest video file: {globals.CURRENT_FILE}")
-
-def file_name():
-    return save_path
+        messagebox.showinfo("Latest video file", f"Latest video file: {os.path.basename(globals.CURRENT_FILE)}")
