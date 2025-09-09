@@ -26,6 +26,20 @@ def download_video():
         messagebox.showinfo("Operation completed", f"Downloaded: {yt.title}")
     except Exception as e:
         messagebox.showerror("Error", f"Couldn't download video: {e}")
+        
+def download_audio():
+    link = globals.VIDEO_LINK
+    if not link.strip():
+        messagebox.showwarning("Warning","No video link, Provide the YouTube video link.")
+        return
+    
+    try:
+        yt = YouTube(link, on_progress_callback=on_progress)
+        ys = yt.streams.get_audio_only()
+        ys.download(choose_path())
+        messagebox.showinfo("Operation completed", f"Downloaded: {yt.title}")
+    except Exception as e:
+        messagebox.showerror("Error", f"Couldn't download audio: {e}")
 
 def save_file_name():
     try:

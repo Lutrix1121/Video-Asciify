@@ -31,11 +31,16 @@ def save_path():
         messagebox.showwarning("Warning", "No path selected.")
         return None
     
-def on_download(link_entry):
+def on_download_video(link_entry):
     """Handle video download process"""
     globals.set_video_link(get_video_link(link_entry))
     download.download_video()
     download.save_file_name()
+
+def on_download_audio(link_entry):  
+    """Handle audio download process"""
+    globals.set_video_link(get_video_link(link_entry))
+    download.download_audio()
 
 def update_progress(current, total, percentage, progress_frame, progress_var, progress_label, root):
     """Update progress bar and label"""

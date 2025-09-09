@@ -139,16 +139,33 @@ class VideoASCIIConverter:
         self.link_entry = tk.Entry(self.root, width=50)
         self.link_entry.pack(pady=5)
 
+        button_frame = tk.Frame(self.root)
+        button_frame.pack(pady=5)
+        
+        # Buttons row
+        buttons_row = tk.Frame(button_frame)
+        buttons_row.pack(pady=5)
+
         # Action buttons
-        download_button = tk.Button(
-            self.root, 
+        downloadVideo_button = tk.Button(
+            buttons_row, 
             text="Download video", 
-            command=lambda: gui_functions.on_download(self.link_entry),
+            command=lambda: gui_functions.on_download_video(self.link_entry),
             width=20,
             height=2,
             bg="lightblue"
         )
-        download_button.pack(pady=10)
+        downloadVideo_button.pack(side = 'left', pady=5, padx = 5)
+
+        downloadAudio_button = tk.Button(
+            buttons_row, 
+            text="Download audio", 
+            command=lambda: gui_functions.on_download_audio(self.link_entry),
+            width=20,
+            height=2,
+            bg="lightblue"
+        )
+        downloadAudio_button.pack(side = 'left', pady=5, padx = 5)     
 
         save_button = tk.Button(
             self.root,
@@ -158,7 +175,7 @@ class VideoASCIIConverter:
             height=2,
             bg="yellow"
         )
-        save_button.pack(pady=10)
+        save_button.pack(pady=10)   
 
         latest_file_button = tk.Button(
             self.root, 
